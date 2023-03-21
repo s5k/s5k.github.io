@@ -12,6 +12,7 @@ import LatestPosts from '~/components/blog/LatestPosts.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Contact from '~/components/widgets/Contact.astro';
 
 const meta = {
   title: SITE.title,
@@ -25,14 +26,15 @@ const meta = {
 
   <Hero
     callToAction={{ text: 'Learn more', href: '#features' }}
-    image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
+    image={{ src: import('~/assets/images/hero.png'), alt: 'Astronaunt Hero Image' }}
   >
     <Fragment slot="title">
       We build custom Magento stores that <span class="text-accent dark:text-white highlight">grow</span> your business
     </Fragment>
 
     <Fragment slot="subtitle">
-      We are a team of experienced Magento developers and designers who can build you a powerful and customized ecommerce store using the Magento platform.
+      We are a team of experienced Magento developers and designers who can build you a powerful and customized
+      ecommerce store using the Magento platform.
     </Fragment>
   </Hero>
 
@@ -44,46 +46,45 @@ const meta = {
 
   <Features
     highlight="Features"
-    title="What you get with AstroWind"
-    subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
+    title="What you get with DevSparks"
+    subtitle="Partner with us and enjoy peace of mind."
     items={[
       [
         {
-          title: 'Astro + Tailwind CSS Integration',
+          title: 'Competitive pricing',
           description:
-            'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-          icon: 'tabler:brand-tailwind',
+            'We offer competitive pricing for our software development services, providing you with high-quality software development at an affordable price.',
+          icon: 'tabler:receipt-2',
         },
         {
-          title: 'Ready-to-use Components',
+          title: 'Ongoing support and maintenance',
           description:
-            'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-          icon: 'tabler:components',
+            'We provide ongoing support and maintenance to ensure that your software continues to function smoothly over time.',
+          icon: 'tabler:heart',
         },
         {
-          title: 'Best Practices',
+          title: 'User-centric design',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+            'We prioritize user experience and design software with a user-centric approach, ensuring that your software is intuitive and easy to use.',
           icon: 'tabler:list-check',
         },
       ],
       [
         {
-          title: 'Excellent Page Speed',
-          description:
-            'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-          icon: 'tabler:rocket',
+          title: 'Cross-platform development',
+          description: 'We can develop software for a range of platforms, including desktop, web, and mobile devices.',
+          icon: 'tabler:apps',
         },
         {
-          title: 'Search Engine Optimization (SEO)',
+          title: 'Agile development process',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+            'We follow an agile development process, which allows us to deliver high-quality software quickly and efficiently',
           icon: 'tabler:arrows-right-left',
         },
         {
-          title: 'Open to new ideas and contributions',
+          title: 'Experienced developers',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
+            'Our team of experienced developers has expertise in a wide range of programming languages and technologies.',
           icon: 'tabler:bulb',
         },
       ],
@@ -93,28 +94,34 @@ const meta = {
   <!-- Steps Widget ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="Get your dream website up and running in no time with DevSparks."
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Step 1: <span class="font-medium">Analyze your requirements</span>',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula.',
+          'This step involves gathering and understanding your business requirements and goals, which helps to shape the direction of the software development project.',
         icon: 'tabler:package',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
+        title: 'Step 2: <span class="font-medium">Create plans & strategies</em>',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.',
-        icon: 'tabler:letter-case',
+          'Based on the requirements analysis, a detailed plan is created for the software development project. This includes determining timelines, milestones, resources required, and outlining strategies for development, testing, deployment, and ongoing maintenance.',
+        icon: 'tabler:news',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Step 3: <span class="font-medium">Develop & design</span>',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus.',
+          'In this stage, the software is designed and developed according to the plans and strategies. This includes selecting programming languages and technologies, writing code, creating user interfaces, and developing backend systems.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">QA test & fix bugs</span>',
+        description:
+          'Once the software is developed, it is tested thoroughly to identify and fix any bugs or issues. Quality assurance testing ensures that the software functions as intended and meets the requirements outlined in the plans and strategies.',
         icon: 'tabler:paint',
       },
       {
-        title: 'Ready!',
+        title: 'Deploy & launch!',
         icon: 'tabler:check',
       },
     ]}
@@ -128,41 +135,41 @@ const meta = {
 
   <FAQs
     title="Frequently Asked Questions"
-    subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
+    subtitle="Get answers to commonly asked questions about our software development services."
     highlight="FAQs"
     items={[
       [
         {
-          question: 'What do I need to start?',
+          question: 'What programming languages do you use?',
           answer:
-            'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+            'We use a wide range of programming languages, depending on the project requirements and client preferences. Some common languages we use include PHP, Nodejs, Golang and JavaScript.',
         },
         {
-          question: 'How to install the Astro + Tailwind CSS template?',
+          question: 'How long does it take to develop custom software?',
           answer:
-            "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.",
+            'The time it takes to develop custom software can vary depending on the complexity of the project and the specific requirements of the client. We work closely with our clients to develop a project timeline that meets their needs.',
         },
         {
-          question: "What's something that you don't understand?",
+          question: 'Can you help with software maintenance and updates?',
           answer:
-            "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+            'Yes, we offer software maintenance and support services to ensure that your software continues to function smoothly over time. We also provide updates and upgrades to keep your software up-to-date and secure.',
         },
       ],
       [
         {
-          question: "What's an example of when you changed your mind?",
+          question: 'Can you develop software for mobile devices?',
           answer:
-            "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+            'Yes, we can develop custom software for a wide range of mobile devices, including iOS and Android devices.',
         },
         {
-          question: 'What is something that you would like to try again?',
+          question: 'Can you integrate third-party software with my custom software?',
           answer:
-            "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+            'Yes, we have experience integrating third-party software and APIs with custom software to provide a seamless user experience and functionality.',
         },
         {
-          question: 'If you could only ask one question to each person you meet, what would that question be?',
+          question: 'Do you provide ongoing support and training for the software?',
           answer:
-            "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+            'Yes, we provide ongoing support and training to ensure that our clients are able to use their custom software effectively and efficiently. We offer a range of training options, including documentation, user guides, and hands-on training sessions.',
         },
       ],
     ]}
@@ -178,4 +185,5 @@ const meta = {
     ]}
   />
 
+  <Contact />
 </Layout>

@@ -51,9 +51,8 @@ const {
             <div class="space-y-8">
               {subitems.map(({ question, answer }) => (
                 <div>
-                  <h3 class="mb-4 text-xl font-bold">
+                  <h3 class="mb-4 text-xl font-bold" set:html={question}>
                     <Icon name="tabler:arrow-down-right" class="w-7 h-7 text-primary inline-block" />
-                    {question}
                   </h3>
                   {answer && <div class="text-muted dark:text-gray-400" set:html={answer} />}
                 </div>
