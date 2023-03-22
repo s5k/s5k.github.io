@@ -3,8 +3,8 @@ import defaultImage from './assets/images/default.png';
 const CONFIG = {
   name: 'DevSparks',
 
-  origin: 'https://astrowind.vercel.app',
-  basePathname: '/',
+  origin: 'https://s5k.github.io',
+  basePathname: '',
   trailingSlash: false,
 
   title: 'DevSparks — Professional Magento Development Services',
