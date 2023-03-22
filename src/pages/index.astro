@@ -1,0 +1,189 @@
+---
+import { SITE } from '~/config.mjs';
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import LatestPosts from '~/components/blog/LatestPosts.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Contact from '~/components/widgets/Contact.astro';
+
+const meta = {
+  title: SITE.title,
+  description: SITE.description,
+  dontUseTitleTemplate: true,
+};
+---
+
+<Layout {meta}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    callToAction={{ text: 'Learn more', href: '#features' }}
+    image={{ src: import('~/assets/images/hero.png'), alt: 'Astronaunt Hero Image' }}
+  >
+    <Fragment slot="title">
+      We build custom Magento stores that <span class="text-accent dark:text-white highlight">grow</span> your business
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      We are a team of experienced Magento developers and designers who can build you a powerful and customized
+      ecommerce store using the Magento platform.
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    highlight="Features"
+    title="What you get with DevSparks"
+    subtitle="Partner with us and enjoy peace of mind."
+    items={[
+      [
+        {
+          title: 'Competitive pricing',
+          description:
+            'We offer competitive pricing for our software development services, providing you with high-quality software development at an affordable price.',
+          icon: 'tabler:receipt-2',
+        },
+        {
+          title: 'Ongoing support and maintenance',
+          description:
+            'We provide ongoing support and maintenance to ensure that your software continues to function smoothly over time.',
+          icon: 'tabler:heart',
+        },
+        {
+          title: 'User-centric design',
+          description:
+            'We prioritize user experience and design software with a user-centric approach, ensuring that your software is intuitive and easy to use.',
+          icon: 'tabler:list-check',
+        },
+      ],
+      [
+        {
+          title: 'Cross-platform development',
+          description: 'We can develop software for a range of platforms, including desktop, web, and mobile devices.',
+          icon: 'tabler:apps',
+        },
+        {
+          title: 'Agile development process',
+          description:
+            'We follow an agile development process, which allows us to deliver high-quality software quickly and efficiently',
+          icon: 'tabler:arrows-right-left',
+        },
+        {
+          title: 'Experienced developers',
+          description:
+            'Our team of experienced developers has expertise in a wide range of programming languages and technologies.',
+          icon: 'tabler:bulb',
+        },
+      ],
+    ]}
+  />
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    title="Get your dream website up and running in no time with DevSparks."
+    items={[
+      {
+        title: 'Step 1: <span class="font-medium">Analyze your requirements</span>',
+        description:
+          'This step involves gathering and understanding your business requirements and goals, which helps to shape the direction of the software development project.',
+        icon: 'tabler:package',
+      },
+      {
+        title: 'Step 2: <span class="font-medium">Create plans & strategies</em>',
+        description:
+          'Based on the requirements analysis, a detailed plan is created for the software development project. This includes determining timelines, milestones, resources required, and outlining strategies for development, testing, deployment, and ongoing maintenance.',
+        icon: 'tabler:news',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">Develop & design</span>',
+        description:
+          'In this stage, the software is designed and developed according to the plans and strategies. This includes selecting programming languages and technologies, writing code, creating user interfaces, and developing backend systems.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Step 3: <span class="font-medium">QA test & fix bugs</span>',
+        description:
+          'Once the software is developed, it is tested thoroughly to identify and fix any bugs or issues. Quality assurance testing ensures that the software functions as intended and meets the requirements outlined in the plans and strategies.',
+        icon: 'tabler:paint',
+      },
+      {
+        title: 'Deploy & launch!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/creativity.jpg'),
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Get answers to commonly asked questions about our software development services."
+    highlight="FAQs"
+    items={[
+      [
+        {
+          question: 'What programming languages do you use?',
+          answer:
+            'We use a wide range of programming languages, depending on the project requirements and client preferences. Some common languages we use include PHP, Nodejs, Golang and JavaScript.',
+        },
+        {
+          question: 'How long does it take to develop custom software?',
+          answer:
+            'The time it takes to develop custom software can vary depending on the complexity of the project and the specific requirements of the client. We work closely with our clients to develop a project timeline that meets their needs.',
+        },
+        {
+          question: 'Can you help with software maintenance and updates?',
+          answer:
+            'Yes, we offer software maintenance and support services to ensure that your software continues to function smoothly over time. We also provide updates and upgrades to keep your software up-to-date and secure.',
+        },
+      ],
+      [
+        {
+          question: 'Can you develop software for mobile devices?',
+          answer:
+            'Yes, we can develop custom software for a wide range of mobile devices, including iOS and Android devices.',
+        },
+        {
+          question: 'Can you integrate third-party software with my custom software?',
+          answer:
+            'Yes, we have experience integrating third-party software and APIs with custom software to provide a seamless user experience and functionality.',
+        },
+        {
+          question: 'Do you provide ongoing support and training for the software?',
+          answer:
+            'Yes, we provide ongoing support and training to ensure that our clients are able to use their custom software effectively and efficiently. We offer a range of training options, including documentation, user guides, and hands-on training sessions.',
+        },
+      ],
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    items={[
+      { name: 'Happy Clients', value: '810+' },
+      { name: 'Projects', value: '820+' },
+      { name: 'Line Code', value: '200.3K' },
+    ]}
+  />
+
+  <Contact />
+</Layout>
