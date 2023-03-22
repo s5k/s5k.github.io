@@ -1,9 +1,9 @@
-import defaultImage from './assets/images/default.png';
+import defaultImage from './assets/images/frontpage.png';
 
 const CONFIG = {
   name: 'DevSparks',
 
-  origin: 'https://s5k.github.io',
+  origin: 'https://s5k-github-io.vercel.app',
   basePathname: '',
   trailingSlash: false,
 
