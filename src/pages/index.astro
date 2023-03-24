@@ -2,18 +2,15 @@
 import { SITE } from '~/config.mjs';
 import Layout from '~/layouts/PageLayout.astro';
 
+import Brands from '~/components/widgets/Brands.astro';
+import Contact from '~/components/widgets/Contact.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Features from '~/components/widgets/Features.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import LatestPosts from '~/components/blog/LatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
-import Contact from '~/components/widgets/Contact.astro';
-import Brands from '~/components/widgets/Brands.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import { getPermalink } from '~/utils/permalinks';
 
 const meta = {
   title: SITE.title,
@@ -26,7 +23,10 @@ const meta = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Learn more', href: '#features' }}
+    callToAction={{
+      text: 'Why You Should Hire Us?',
+      href: getPermalink('why-you-should-hire-us-for-development', 'Why you should hire us?'),
+    }}
     image={{ src: import('~/assets/images/hero.png'), alt: 'Astronaunt Hero Image' }}
   >
     <Fragment slot="title">

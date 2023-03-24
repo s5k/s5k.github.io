@@ -8,8 +8,7 @@ const CONFIG = {
   trailingSlash: false,
 
   title: 'DevSparks — Professional Magento Development Services',
-  description:
-    '🚀 We build custom Magento stores that grow your business.',
+  description: '🚀 We build custom Magento stores that grow your business.',
   defaultImage: defaultImage,
 
   defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
@@ -28,7 +27,7 @@ const CONFIG = {
   googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
 
   blog: {
-    disabled: true,
+    disabled: false,
     postsPerPage: 4,
 
     post: {
