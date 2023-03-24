@@ -1,0 +1,99 @@
+---
+import { Image } from '@astrojs/image/components';
+
+interface Item {
+  title: string;
+  description?: string;
+  icon?: string;
+}
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  highlight?: string;
+  content?: string;
+  items?: Array<Item>;
+  image?: string | any; // TODO: find HTMLElementProps
+  isReversed?: boolean;
+  isAfterContent?: boolean;
+}
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  highlight,
+  content = await Astro.slots.render('content'),
+  items = [],
+  image = await Astro.slots.render('image'),
+  isReversed = false,
+  isAfterContent = false,
+} = Astro.props;
+---
+
+<section class:list={[{ 'pt-0 md:pt-0': isAfterContent }, 'bg-blue-50 dark:bg-slate-800 py-16 md:py-20']}>
+  <div class="max-w-6xl sm:mx-auto px-6">
+    <div class="grid grid-cols-1 gap-x-8 gap-y-8 lg:gap-x-16 md:grid-cols-2">
+      <div class="space-y-8">
+        <div class="md:mt-10">
+          <h2 class="mb-4 text-2xl font-bold">Trusted by the most innovative teams</h2>
+          <div class="text-muted dark:text-gray-400">
+            We're proud to have earned the trust of the most creative and ambitious teams in software development, and
+            we're committed to continuing to exceed their expectations.
+          </div>
+        </div>
+      </div>
+      <div class="space-y-8">
+        <div class="grid grid-cols-2 gap-6">
+          <div class="mb-5">
+            <Image
+              src={import('~/assets/images/Magento.svg')}
+              alt="Client"
+              width={200}
+              class="h-16 high-constrast-img dark:invert-img"
+            />
+          </div>
+          <div class="mb-5">
+            <Image
+              src={import('~/assets/images/laravel.svg')}
+              alt="Client"
+              width={200}
+              class="h-16 high-constrast-img"
+            />
+          </div>
+          <div class="mb-5">
+            <Image
+              src={import('~/assets/images/Manta-Network.svg')}
+              alt="Client"
+              width={200}
+              class="h-16 high-constrast-img dark:invert-img"
+            />
+          </div>
+          <div class="mb-5">
+            <Image
+              src={import('~/assets/images/Karma.svg')}
+              alt="Client"
+              width={200}
+              class="h-16 high-constrast-img dark:invert-img"
+            />
+          </div>
+          <div class="mb-5">
+            <Image
+              src={import('~/assets/images/Canon-New.svg')}
+              alt="Client"
+              width={200}
+              class="h-16 high-constrast-img"
+            />
+          </div>
+          <div class="mb-5">
+            <Image
+              src={import('~/assets/images/Filebolt.svg')}
+              alt="Client"
+              width={200}
+              class="h-16 high-constrast-img"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

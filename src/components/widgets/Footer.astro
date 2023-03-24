@@ -38,11 +38,6 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
         <p>Contact: sales@devsparks.com</p>
         <p>199 Dien Bien Phu St., Ho Chi Minh City, Vietnam</p>
         <div class="text-sm text-muted">
-          <a
-            class="text-muted hover:text-gray-700 dark:text-gray-400 hover:underline transition duration-150 ease-in-out mr-2"
-            href={getPermalink('/#contact')}
-            set:html={'Contact Us'}
-          />
           {
             secondaryLinks.map(({ text, href }) => (
               <a

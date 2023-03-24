@@ -31,6 +31,14 @@
   .btn-primary {
     @apply font-semibold bg-primary text-white border-primary hover:bg-blue-900 hover:border-blue-900 hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-blue-900 dark:hover:bg-blue-900;
   }
+
+  .high-constrast-img {
+    @apply filter contrast-200; 
+  }
+
+  .invert-img {
+    @apply filter invert; 
+  }
 }
 
 #header.scroll {
